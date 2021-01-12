@@ -1,0 +1,17 @@
+<h2> Studenti Lista </h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th> Broj indeksa </th>
+            <th> Ime </th>
+            <th> Prezime </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let student of students">
+            <td> {{ student.cardNumber }}</td>
+            <td> {{ student.firstName }}</td>
+            <td> {{ student.lastName }}</td>
+        </tr>
+    </tbody>
+</table>

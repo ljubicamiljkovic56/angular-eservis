@@ -1,0 +1,25 @@
+import { Component, OnInit } from '@angular/core';
+import { Student } from '../../app/model/student';
+import { StudentService } from '../../app/services/student.service';
+
+@Component({
+  selector: 'app-student-list',
+  templateUrl: './student-list.component.html',
+  styleUrls: ['./student-list.component.css']
+})
+export class StudentListComponent implements OnInit {
+
+  students: Student[];
+
+  constructor(private studentService: StudentService) { }
+
+  ngOnInit(): void {
+    this.getStudents();
+  }
+
+  private getStudents() {
+    this.studentService.getStudentsList().subscribe(data => {
+        this.students = data;
+    });
+  }
+}
