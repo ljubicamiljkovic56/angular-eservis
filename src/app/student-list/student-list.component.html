@@ -15,6 +15,8 @@
             <td> {{ student.lastName }}</td>
             <td>
                 <button (click) = "updateStudent(student.id)" class="btn btn-info">Izmeni</button>
+                <button (click) = "deleteStudent(student.id)" class="btn btn-danger" style="margin-left: 10px;">Obrisi</button>
+                <button (click) = "studentDetails(student.id)" class="btn btn-success" style="margin-left: 10px;">Detalji</button>
             </td>
         </tr>
     </tbody>
