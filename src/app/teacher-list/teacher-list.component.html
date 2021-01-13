@@ -1,0 +1,24 @@
+<h2> Profesori Lista </h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th> Ime </th>
+            <th> Prezime </th>
+            <th> Zvanje </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let teacher of teachers">
+            <td> {{ teacher.firstName }}</td>
+            <td> {{ teacher.lastName }}</td>
+            <td> {{teacher.title }} </td>
+            <td>
+                <!-- <button (click) = "updateTeacher(student.id)" class="btn btn-info">Izmeni</button>
+                <button (click) = "deleteStudent(student.id)" class="btn btn-danger" style="margin-left: 10px;">Obrisi</button>
+                <button (click) = "studentDetails(student.id)" class="btn btn-success" style="margin-left: 10px;">Detalji</button> -->
+            </td>
+        </tr>
+    </tbody>
+</table>
+
