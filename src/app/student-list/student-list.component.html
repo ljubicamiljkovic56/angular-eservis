@@ -5,6 +5,7 @@
             <th> Broj indeksa </th>
             <th> Ime </th>
             <th> Prezime </th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -12,6 +13,9 @@
             <td> {{ student.cardNumber }}</td>
             <td> {{ student.firstName }}</td>
             <td> {{ student.lastName }}</td>
+            <td>
+                <button (click) = "updateStudent(student.id)" class="btn btn-info">Izmeni</button>
+            </td>
         </tr>
     </tbody>
 </table>

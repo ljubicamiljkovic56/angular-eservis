@@ -1,0 +1,21 @@
+<div class="col-md-6 offset-md-3">
+    <h3> Izmeni studenta </h3>
+    <form (ngSubmit) = "onSubmit()">
+        <div class="form-group">
+            <label> Broj indeksa </label>
+            <input type="text" class="form-control" id="cardNumber" [(ngModel)]="student.cardNumber" name="cardNumber">
+        </div>
+    
+        <div class="form-group">
+            <label> Ime studenta </label>
+            <input type="text" class="form-control" id="firstName" [(ngModel)]="student.firstName" name="firstName">
+        </div>
+    
+        <div class="form-group">
+            <label> Prezime studenta </label>
+            <input type="text" class="form-control" id="lastName" [(ngModel)]="student.lastName" name="lastName">
+        </div>
+    
+        <button class="btn btn-success" type="submit">Izmeni</button>
+    </form>
+</div>
