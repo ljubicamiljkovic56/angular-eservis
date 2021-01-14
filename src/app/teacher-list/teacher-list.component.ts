@@ -25,4 +25,8 @@ export class TeacherListComponent implements OnInit {
     });
   }
 
+  updateTeacher(id: number){
+    this.router.navigate(['update-teacher', id]);
+  }
+
 }

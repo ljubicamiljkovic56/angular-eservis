@@ -9,6 +9,8 @@ import { FormsModule } from '@angular/forms';
 import { UpdateStudentComponent } from './update-student/update-student.component';
 import { StudentDetailsComponent } from './student-details/student-details.component';
 import { TeacherListComponent } from './teacher-list/teacher-list.component';
+import { CreateTeacherComponent } from './create-teacher/create-teacher.component';
+import { UpdateTeacherComponent } from './update-teacher/update-teacher.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,9 @@ import { TeacherListComponent } from './teacher-list/teacher-list.component';
     CreateStudentComponent,
     UpdateStudentComponent,
     StudentDetailsComponent,
-    TeacherListComponent
+    TeacherListComponent,
+    CreateTeacherComponent,
+    UpdateTeacherComponent
   ],
   imports: [
     BrowserModule,
