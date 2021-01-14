@@ -11,6 +11,7 @@ import { StudentDetailsComponent } from './student-details/student-details.compo
 import { TeacherListComponent } from './teacher-list/teacher-list.component';
 import { CreateTeacherComponent } from './create-teacher/create-teacher.component';
 import { UpdateTeacherComponent } from './update-teacher/update-teacher.component';
+import { TeacherDetailsComponent } from './teacher-details/teacher-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,8 @@ import { UpdateTeacherComponent } from './update-teacher/update-teacher.componen
     StudentDetailsComponent,
     TeacherListComponent,
     CreateTeacherComponent,
-    UpdateTeacherComponent
+    UpdateTeacherComponent,
+    TeacherDetailsComponent
   ],
   imports: [
     BrowserModule,
