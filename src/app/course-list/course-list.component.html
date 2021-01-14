@@ -3,12 +3,15 @@
     <thead>
         <tr>
             <th> Naziv predmeta </th>
-            <th></th>
+            <th> ESPB bodovi </th>
+            <th> Semestar </th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor = "let course of courses">
             <td> {{ course.name }}</td>
+            <td> {{ course.espb }}</td>
+            <td> {{ course.semester }}</td>
             <td>
                 <!-- <button (click) = "updateStudent(student.id)" class="btn btn-info">Izmeni</button>
                 <button (click) = "deleteStudent(student.id)" class="btn btn-danger" style="margin-left: 10px;">Obrisi</button>
