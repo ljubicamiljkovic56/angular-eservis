@@ -12,6 +12,7 @@ import { TeacherListComponent } from './teacher-list/teacher-list.component';
 import { CreateTeacherComponent } from './create-teacher/create-teacher.component';
 import { UpdateTeacherComponent } from './update-teacher/update-teacher.component';
 import { TeacherDetailsComponent } from './teacher-details/teacher-details.component';
+import { CourseListComponent } from './course-list/course-list.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import { TeacherDetailsComponent } from './teacher-details/teacher-details.compo
     TeacherListComponent,
     CreateTeacherComponent,
     UpdateTeacherComponent,
-    TeacherDetailsComponent
+    TeacherDetailsComponent,
+    CourseListComponent
   ],
   imports: [
     BrowserModule,
