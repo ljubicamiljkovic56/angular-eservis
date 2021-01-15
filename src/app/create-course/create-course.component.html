@@ -1,0 +1,34 @@
+<div class="col-md-6 offset-md-3">
+    <h3> Dodaj predmet </h3>
+    <form (ngSubmit) = "onSubmit()">
+        <div class="form-group" [formGroup]="form">
+            <label> Naziv predmeta </label>
+            <input type="text" class="form-control" id="name" [(ngModel)]="course.name" name="name" [formControl]="form.controls.name">
+        </div>
+    
+        <div class="form-group" [formGroup]="form">
+            <label> ESPB bodovi</label>
+            <input type="text" class="form-control" id="espb" [(ngModel)]="course.espb" name="espb" [formControl]="form.controls.espb">
+        </div>
+    
+        <div class="form-group" [formGroup]="form">
+            <label> Semestar </label>
+            <select class="form-control" id="semester" [(ngModel)]="course.semester" name="semester" [formControl]="form.controls.semester">
+                <option>zimski</option>
+                <option>letnji</option>
+            </select>
+        </div>
+
+        <div class="form-group" [formGroup]="form">
+            <label for="teachers"> Profesor </label>
+            <select class="form-control"  formControlName="teachers" id="teachers" required>
+                <option *ngFor="let teacher of teachers; let i = index;" [value]="teachers[i].id">
+                    {{teachers[i].firstName}}  {{teachers[i].lastName}}
+                </option>
+            </select>
+        </div>
+    
+        <button class="btn btn-success" type="submit">Dodaj</button>
+    </form>
+    </div>
+    

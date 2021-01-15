@@ -5,6 +5,8 @@
             <th> Naziv predmeta </th>
             <th> ESPB bodovi </th>
             <th> Semestar </th>
+            <th> Predavac </th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -12,6 +14,7 @@
             <td> {{ course.name }}</td>
             <td> {{ course.espb }}</td>
             <td> {{ course.semester }}</td>
+            <td> {{ course.teacher.firstName }} {{ course.teacher.lastName }}</td>
             <td>
                 <!-- <button (click) = "updateStudent(student.id)" class="btn btn-info">Izmeni</button>
                 <button (click) = "deleteStudent(student.id)" class="btn btn-danger" style="margin-left: 10px;">Obrisi</button>
