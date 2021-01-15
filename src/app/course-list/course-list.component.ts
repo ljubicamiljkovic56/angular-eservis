@@ -25,9 +25,12 @@ export class CourseListComponent implements OnInit {
     });
   }
 
-  updateCourses(id: number){
-
+  updateCourse(id: number){
+    this.router.navigate(['update-course',  id]);
   }
 
+  courseDetails(id: number) {
+    this.router.navigate(['course-details', id]);
+  }
   
 }

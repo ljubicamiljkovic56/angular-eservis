@@ -8,6 +8,7 @@ import { StudentDetailsComponent } from './student-details/student-details.compo
 import { StudentListComponent } from './student-list/student-list.component';
 import { TeacherDetailsComponent } from './teacher-details/teacher-details.component';
 import { TeacherListComponent } from './teacher-list/teacher-list.component';
+import { UpdateCourseComponent } from './update-course/update-course.component';
 import { UpdateStudentComponent } from './update-student/update-student.component';
 import { UpdateTeacherComponent } from './update-teacher/update-teacher.component';
 
@@ -22,7 +23,8 @@ const routes: Routes = [
   {path: 'update-teacher/:id', component: UpdateTeacherComponent},
   {path: 'teacher-details/:id', component: TeacherDetailsComponent},
   {path: 'courses', component: CourseListComponent},
-  {path: 'create-course', component: CreateCourseComponent}
+  {path: 'create-course', component: CreateCourseComponent},
+  {path: 'update-course/:id', component: UpdateCourseComponent}
 ];
 
 @NgModule({
