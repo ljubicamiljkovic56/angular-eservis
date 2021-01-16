@@ -16,6 +16,9 @@ import { CourseListComponent } from './course-list/course-list.component';
 import { CreateCourseComponent } from './create-course/create-course.component';
 import { UpdateCourseComponent } from './update-course/update-course.component';
 import { CourseDetailsComponent } from './course-details/course-details.component';
+import { DocumentListComponent } from './document-list/document-list.component';
+import { CreateDocumentComponent } from './create-document/create-document.component';
+import { DocumentDetailsComponent } from './document-details/document-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +33,10 @@ import { CourseDetailsComponent } from './course-details/course-details.componen
     CourseListComponent,
     CreateCourseComponent,
     UpdateCourseComponent,
-    CourseDetailsComponent
+    CourseDetailsComponent,
+    DocumentListComponent,
+    CreateDocumentComponent,
+    DocumentDetailsComponent
   ],
   imports: [
     BrowserModule,

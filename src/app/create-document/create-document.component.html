@@ -1,0 +1,24 @@
+<div class="col-md-6 offset-md-3">
+    <h3> Dodaj document </h3>
+    <form (ngSubmit) = "onSubmit()">
+        <div class="form-group" [formGroup]="form">
+            <label> Tip dokumenta </label>
+            <select class="form-control"  formControlName="types" id="types" required>
+                <option *ngFor="let type of types; let i = index;" [value]="types[i].id">
+                    {{types[i].name}}
+                </option>
+            </select>
+        </div>
+
+        <div class="form-group" [formGroup]="form">
+            <label for="students"> Student </label>
+            <select class="form-control"  formControlName="students" id="students" required>
+                <option *ngFor="let student of students; let i = index;" [value]="students[i].id">
+                    {{students[i].firstName}}  {{students[i].lastName}}
+                </option>
+            </select>
+        </div>
+    
+        <button class="btn btn-success" type="submit">Dodaj</button>
+    </form>
+</div>
