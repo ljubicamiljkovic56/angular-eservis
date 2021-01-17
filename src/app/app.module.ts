@@ -22,6 +22,8 @@ import { DocumentDetailsComponent } from './document-details/document-details.co
 import { UpdateDocumentComponent } from './update-document/update-document.component';
 import { EnrollmentListComponent } from './enrollment-list/enrollment-list.component';
 import { EnrollmentDetailsComponent } from './enrollment-details/enrollment-details.component';
+import { ExamPeriodListComponent } from './exam-period-list/exam-period-list.component';
+import { ExamPeriodDetailsComponent } from './exam-period-details/exam-period-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +44,9 @@ import { EnrollmentDetailsComponent } from './enrollment-details/enrollment-deta
     DocumentDetailsComponent,
     UpdateDocumentComponent,
     EnrollmentListComponent,
-    EnrollmentDetailsComponent
+    EnrollmentDetailsComponent,
+    ExamPeriodListComponent,
+    ExamPeriodDetailsComponent
   ],
   imports: [
     BrowserModule,

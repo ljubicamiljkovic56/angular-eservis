@@ -10,6 +10,8 @@ import { DocumentDetailsComponent } from './document-details/document-details.co
 import { DocumentListComponent } from './document-list/document-list.component';
 import { EnrollmentDetailsComponent } from './enrollment-details/enrollment-details.component';
 import { EnrollmentListComponent } from './enrollment-list/enrollment-list.component';
+import { ExamPeriodDetailsComponent } from './exam-period-details/exam-period-details.component';
+import { ExamPeriodListComponent } from './exam-period-list/exam-period-list.component';
 import { EnrollmentService } from './services/enrollment.service';
 import { StudentDetailsComponent } from './student-details/student-details.component';
 import { StudentListComponent } from './student-list/student-list.component';
@@ -39,7 +41,9 @@ const routes: Routes = [
   {path: 'document-details/:id', component: DocumentDetailsComponent},
   {path: 'update-document/:id', component: UpdateDocumentComponent},
   {path: 'enrollments', component: EnrollmentListComponent},
-  {path: 'enrollment-details/:id', component: EnrollmentDetailsComponent}
+  {path: 'enrollment-details/:id', component: EnrollmentDetailsComponent},
+  {path: 'examperiods', component: ExamPeriodListComponent},
+  {path: 'examperiod-details/:id', component: ExamPeriodDetailsComponent}
 ];
 
 @NgModule({
