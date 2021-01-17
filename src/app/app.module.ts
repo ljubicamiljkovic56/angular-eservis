@@ -20,6 +20,8 @@ import { DocumentListComponent } from './document-list/document-list.component';
 import { CreateDocumentComponent } from './create-document/create-document.component';
 import { DocumentDetailsComponent } from './document-details/document-details.component';
 import { UpdateDocumentComponent } from './update-document/update-document.component';
+import { EnrollmentListComponent } from './enrollment-list/enrollment-list.component';
+import { EnrollmentDetailsComponent } from './enrollment-details/enrollment-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +40,9 @@ import { UpdateDocumentComponent } from './update-document/update-document.compo
     DocumentListComponent,
     CreateDocumentComponent,
     DocumentDetailsComponent,
-    UpdateDocumentComponent
+    UpdateDocumentComponent,
+    EnrollmentListComponent,
+    EnrollmentDetailsComponent
   ],
   imports: [
     BrowserModule,

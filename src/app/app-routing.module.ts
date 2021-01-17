@@ -8,6 +8,9 @@ import { CreateStudentComponent } from './create-student/create-student.componen
 import { CreateTeacherComponent } from './create-teacher/create-teacher.component';
 import { DocumentDetailsComponent } from './document-details/document-details.component';
 import { DocumentListComponent } from './document-list/document-list.component';
+import { EnrollmentDetailsComponent } from './enrollment-details/enrollment-details.component';
+import { EnrollmentListComponent } from './enrollment-list/enrollment-list.component';
+import { EnrollmentService } from './services/enrollment.service';
 import { StudentDetailsComponent } from './student-details/student-details.component';
 import { StudentListComponent } from './student-list/student-list.component';
 import { TeacherDetailsComponent } from './teacher-details/teacher-details.component';
@@ -34,7 +37,9 @@ const routes: Routes = [
   {path: 'documents', component: DocumentListComponent},
   {path: 'create-document', component: CreateDocumentComponent},
   {path: 'document-details/:id', component: DocumentDetailsComponent},
-  {path: 'update-document/:id', component: UpdateDocumentComponent}
+  {path: 'update-document/:id', component: UpdateDocumentComponent},
+  {path: 'enrollments', component: EnrollmentListComponent},
+  {path: 'enrollment-details/:id', component: EnrollmentDetailsComponent}
 ];
 
 @NgModule({

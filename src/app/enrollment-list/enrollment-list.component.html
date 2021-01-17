@@ -1,0 +1,26 @@
+<h2> Pohadjanje predmeta </h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th> Pocetak </th>
+            <th> Kraj </th>
+            <th> Predmet </th>
+            <th> Student </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let enrollment of enrollments">
+            <td> {{ enrollment.startDate }}</td>
+            <td> {{ enrollment.endDate }}</td>
+            <td> {{ enrollment.course.name }}</td>
+            <td> {{ enrollment.student.firstName }} {{ enrollment.student.lastName }}</td>
+            <td>
+                <button (click) = "updateEnrollment(enrollment.id)" class="btn btn-info">Izmeni</button>
+                <button (click) = "deleteEnrollment(enrollment.id)" class="btn btn-danger" style="margin-left: 10px;">Obrisi</button>
+                <button (click) = "enrollmentDetails(enrollment.id)" class="btn btn-success" style="margin-left: 10px;">Detalji</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
