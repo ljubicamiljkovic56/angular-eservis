@@ -12,7 +12,7 @@
             <td> {{ document.type.name}}</td>
             <td> {{ document.student.firstName}} {{ document.student.lastName }}</td>
             <td>
-                <!-- <button (click) = "updateCourse(course.id)" class="btn btn-info">Izmeni</button> -->
+                <button (click) = "updateDocument(document.id)" class="btn btn-info">Izmeni</button>
                 <button (click) = "deleteDocument(document.id)" class="btn btn-danger" style="margin-left: 10px;">Obrisi</button>
                 <button (click) = "documentDetails(document.id)" class="btn btn-success" style="margin-left: 10px;">Detalji</button>
             </td>

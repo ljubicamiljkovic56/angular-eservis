@@ -19,6 +19,7 @@ import { CourseDetailsComponent } from './course-details/course-details.componen
 import { DocumentListComponent } from './document-list/document-list.component';
 import { CreateDocumentComponent } from './create-document/create-document.component';
 import { DocumentDetailsComponent } from './document-details/document-details.component';
+import { UpdateDocumentComponent } from './update-document/update-document.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +37,8 @@ import { DocumentDetailsComponent } from './document-details/document-details.co
     CourseDetailsComponent,
     DocumentListComponent,
     CreateDocumentComponent,
-    DocumentDetailsComponent
+    DocumentDetailsComponent,
+    UpdateDocumentComponent
   ],
   imports: [
     BrowserModule,

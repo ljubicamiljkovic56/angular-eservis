@@ -27,7 +27,7 @@ export class DocumentListComponent implements OnInit {
   }
 
   updateDocument(id: number){
-
+    this.router.navigate(['update-document',  id]);
   }
 
   deleteDocument(id: number) {

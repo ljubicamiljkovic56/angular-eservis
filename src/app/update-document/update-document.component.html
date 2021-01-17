@@ -1,9 +1,9 @@
 <div class="col-md-6 offset-md-3">
-    <h3> Dodaj dokument </h3>
+    <h3> Izmeni dokument </h3>
     <form (ngSubmit) = "onSubmit()">
         <div class="form-group" [formGroup]="form">
             <label> Tip dokumenta </label>
-            <select class="form-control"  formControlName="types" id="types" required>
+            <select class="form-control"  formControlName="types" id="types" required [(ngModel)]="document.type">
                 <option *ngFor="let type of types; let i = index;" [value]="types[i].id">
                     {{types[i].name}}
                 </option>
@@ -19,6 +19,6 @@
             </select>
         </div>
     
-        <button class="btn btn-success" type="submit">Dodaj</button>
+        <button class="btn btn-success" type="submit">Izmeni</button>
     </form>
 </div>
