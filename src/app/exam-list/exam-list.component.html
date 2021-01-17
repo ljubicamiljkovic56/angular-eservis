@@ -1,0 +1,30 @@
+<h2> Ispiti lista </h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th> Ispitni bodovi </th>
+            <th> Bodovi kolokvijum</th>
+            <th> Datum </th>
+            <th> Predmet </th>
+            <th> Student </th>
+            <th> Ispitni rok </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let exam of exams">
+            <td> {{ exam.examPoints }}</td>
+            <td> {{ exam.labPoints }}</td>
+            <td> {{ exam.datum }} </td>
+            <td> {{ exam.course.name }} </td>
+            <td> {{ exam.student.firstName }} {{ exam.student.lastName }}</td>
+            <td> {{ exam.examPeriod.name}}</td>
+            <td>
+                <button (click) = "updateExam(exam.id)" class="btn btn-info">Izmeni</button>
+                <button (click) = "deleteExam(exam.id)" class="btn btn-danger" style="margin-left: 10px;">Obrisi</button>
+                <button (click) = "examDetails(exam.id)" class="btn btn-success" style="margin-left: 10px;">Detalji</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
