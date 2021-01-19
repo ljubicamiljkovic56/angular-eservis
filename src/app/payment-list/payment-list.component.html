@@ -1,0 +1,26 @@
+<h2> Uplate lista </h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th> Svrha uplate </th>
+            <th> Iznos uplate </th>
+            <th> Datum uplate </th>
+            <th> Student </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let payment of payments">
+            <td> {{ payment.svrha }}</td>
+            <td> {{ payment.amount }}</td>
+            <td> {{ payment.datum }}</td>
+            <td> {{ payment.student.firstName }} {{ payment.student.lastName }}</td>
+            <td>
+                <button (click) = "updatePayment(payment.id)" class="btn btn-info">Izmeni</button>
+                <button (click) = "deletePayment(payment.id)" class="btn btn-danger" style="margin-left: 10px;">Obrisi</button>
+                <button (click) = "paymentDetails(payment.id)" class="btn btn-success" style="margin-left: 10px;">Detalji</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
