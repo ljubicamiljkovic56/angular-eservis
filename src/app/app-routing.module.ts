@@ -14,6 +14,7 @@ import { ExamDetailsComponent } from './exam-details/exam-details.component';
 import { ExamListComponent } from './exam-list/exam-list.component';
 import { ExamPeriodDetailsComponent } from './exam-period-details/exam-period-details.component';
 import { ExamPeriodListComponent } from './exam-period-list/exam-period-list.component';
+import { LoginComponent } from './login/login.component';
 import { EnrollmentService } from './services/enrollment.service';
 import { StudentDetailsComponent } from './student-details/student-details.component';
 import { StudentListComponent } from './student-list/student-list.component';
@@ -47,7 +48,8 @@ const routes: Routes = [
   {path: 'examperiods', component: ExamPeriodListComponent},
   {path: 'examperiod-details/:id', component: ExamPeriodDetailsComponent},
   {path: 'exams', component: ExamListComponent},
-  {path: 'exam-details/:id', component: ExamDetailsComponent}
+  {path: 'exam-details/:id', component: ExamDetailsComponent},
+  {path: 'login', component: LoginComponent}
 ];
 
 @NgModule({

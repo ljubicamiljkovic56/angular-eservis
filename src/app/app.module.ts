@@ -26,6 +26,7 @@ import { ExamPeriodListComponent } from './exam-period-list/exam-period-list.com
 import { ExamPeriodDetailsComponent } from './exam-period-details/exam-period-details.component';
 import { ExamListComponent } from './exam-list/exam-list.component';
 import { ExamDetailsComponent } from './exam-details/exam-details.component';
+import { LoginComponent } from './login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,7 +51,8 @@ import { ExamDetailsComponent } from './exam-details/exam-details.component';
     ExamPeriodListComponent,
     ExamPeriodDetailsComponent,
     ExamListComponent,
-    ExamDetailsComponent
+    ExamDetailsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
