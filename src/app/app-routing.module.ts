@@ -5,6 +5,7 @@ import { CourseListComponent } from './course-list/course-list.component';
 import { CreateCourseComponent } from './create-course/create-course.component';
 import { CreateDocumentComponent } from './create-document/create-document.component';
 import { CreateEnrollmentComponent } from './create-enrollment/create-enrollment.component';
+import { CreateExamPeriodComponent } from './create-exam-period/create-exam-period.component';
 import { CreateStudentComponent } from './create-student/create-student.component';
 import { CreateTeacherComponent } from './create-teacher/create-teacher.component';
 import { DocumentDetailsComponent } from './document-details/document-details.component';
@@ -53,6 +54,7 @@ const routes: Routes = [
   {path: 'update-enrollment/:id', component: UpdateEnrollmentComponent},
   {path: 'enrollment-details/:id', component: EnrollmentDetailsComponent},
   {path: 'examperiods', component: ExamPeriodListComponent},
+  {path: 'create-examperiod', component: CreateExamPeriodComponent},
   {path: 'examperiod-details/:id', component: ExamPeriodDetailsComponent},
   {path: 'exams', component: ExamListComponent},
   {path: 'exam-details/:id', component: ExamDetailsComponent},

@@ -31,6 +31,7 @@ import { PaymentListComponent } from './payment-list/payment-list.component';
 import { PaymentDetailsComponent } from './payment-details/payment-details.component';
 import { CreateEnrollmentComponent } from './create-enrollment/create-enrollment.component';
 import { UpdateEnrollmentComponent } from './update-enrollment/update-enrollment.component';
+import { CreateExamPeriodComponent } from './create-exam-period/create-exam-period.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,7 +61,8 @@ import { UpdateEnrollmentComponent } from './update-enrollment/update-enrollment
     PaymentListComponent,
     PaymentDetailsComponent,
     CreateEnrollmentComponent,
-    UpdateEnrollmentComponent
+    UpdateEnrollmentComponent,
+    CreateExamPeriodComponent
   ],
   imports: [
     BrowserModule,
