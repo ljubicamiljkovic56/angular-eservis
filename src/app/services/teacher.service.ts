@@ -31,4 +31,5 @@ export class TeacherService {
   deleteTeacher(id: number): Observable<Object>{
     return this.httpClient.delete(`${this.baseURL}/deleteTeacher/${id}`);
   }
+
 }

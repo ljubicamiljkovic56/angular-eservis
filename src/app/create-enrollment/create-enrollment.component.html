@@ -1,0 +1,34 @@
+<div class="col-md-6 offset-md-3">
+    <h3> Dodaj pohadjanje predmeta </h3>
+    <form (ngSubmit) = "onSubmit()">
+        <div class="form-group" [formGroup]="form">
+            <label> Pocetak </label>
+            <input type="date" class="form-control" id="startDate" [(ngModel)]="enrollment.startDate" name="startDate" [formControl]="form.controls.startDate">
+        </div>
+    
+        <div class="form-group" [formGroup]="form">
+            <label> Kraj </label>
+            <input type="date" class="form-control" id="endDate" [(ngModel)]="enrollment.endDate" name="endDate" [formControl]="form.controls.endDate">
+        </div>
+    
+        <div class="form-group" [formGroup]="form">
+            <label for="courses"> Course </label>
+            <select class="form-control"  formControlName="courses" id="courses" required>
+                <option *ngFor="let course of courses; let i = index;" [value]="courses[i].id">
+                    {{ courses[i].name }}
+                </option>
+            </select>
+        </div>
+
+        <div class="form-group" [formGroup]="form">
+            <label for="students"> Student </label>
+            <select class="form-control"  formControlName="students" id="students" required>
+                <option *ngFor="let student of students; let i = index;" [value]="students[i].id">
+                    {{students[i].cardNumber}} {{students[i].firstName}}  {{students[i].lastName}}
+                </option>
+            </select>
+        </div>
+    
+        <button class="btn btn-success" type="submit">Dodaj</button>
+    </form>
+</div>

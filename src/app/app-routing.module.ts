@@ -4,6 +4,7 @@ import { CourseDetailsComponent } from './course-details/course-details.componen
 import { CourseListComponent } from './course-list/course-list.component';
 import { CreateCourseComponent } from './create-course/create-course.component';
 import { CreateDocumentComponent } from './create-document/create-document.component';
+import { CreateEnrollmentComponent } from './create-enrollment/create-enrollment.component';
 import { CreateStudentComponent } from './create-student/create-student.component';
 import { CreateTeacherComponent } from './create-teacher/create-teacher.component';
 import { DocumentDetailsComponent } from './document-details/document-details.component';
@@ -24,13 +25,15 @@ import { TeacherDetailsComponent } from './teacher-details/teacher-details.compo
 import { TeacherListComponent } from './teacher-list/teacher-list.component';
 import { UpdateCourseComponent } from './update-course/update-course.component';
 import { UpdateDocumentComponent } from './update-document/update-document.component';
+import { UpdateEnrollmentComponent } from './update-enrollment/update-enrollment.component';
 import { UpdateStudentComponent } from './update-student/update-student.component';
 import { UpdateTeacherComponent } from './update-teacher/update-teacher.component';
 
 const routes: Routes = [
+  {path: 'login', component: LoginComponent},
   {path: 'students', component: StudentListComponent},
   {path: 'create-student', component: CreateStudentComponent},
-  {path: '', redirectTo: 'students', pathMatch: 'full'},
+  {path: '', redirectTo: 'login', pathMatch: 'full'},
   {path: 'update-student/:id', component: UpdateStudentComponent},
   {path: 'student-details/:id', component: StudentDetailsComponent},
   {path: 'teachers', component: TeacherListComponent},
@@ -46,12 +49,13 @@ const routes: Routes = [
   {path: 'document-details/:id', component: DocumentDetailsComponent},
   {path: 'update-document/:id', component: UpdateDocumentComponent},
   {path: 'enrollments', component: EnrollmentListComponent},
+  {path: 'create-enrollment', component: CreateEnrollmentComponent},
+  {path: 'update-enrollment/:id', component: UpdateEnrollmentComponent},
   {path: 'enrollment-details/:id', component: EnrollmentDetailsComponent},
   {path: 'examperiods', component: ExamPeriodListComponent},
   {path: 'examperiod-details/:id', component: ExamPeriodDetailsComponent},
   {path: 'exams', component: ExamListComponent},
   {path: 'exam-details/:id', component: ExamDetailsComponent},
-  {path: 'login', component: LoginComponent},
   {path: 'payments', component: PaymentListComponent},
   {path: 'payment-details/:id', component: PaymentDetailsComponent}
 ];

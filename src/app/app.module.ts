@@ -29,6 +29,8 @@ import { ExamDetailsComponent } from './exam-details/exam-details.component';
 import { LoginComponent } from './login/login.component';
 import { PaymentListComponent } from './payment-list/payment-list.component';
 import { PaymentDetailsComponent } from './payment-details/payment-details.component';
+import { CreateEnrollmentComponent } from './create-enrollment/create-enrollment.component';
+import { UpdateEnrollmentComponent } from './update-enrollment/update-enrollment.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,7 +58,9 @@ import { PaymentDetailsComponent } from './payment-details/payment-details.compo
     ExamDetailsComponent,
     LoginComponent,
     PaymentListComponent,
-    PaymentDetailsComponent
+    PaymentDetailsComponent,
+    CreateEnrollmentComponent,
+    UpdateEnrollmentComponent
   ],
   imports: [
     BrowserModule,
