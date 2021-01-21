@@ -33,6 +33,8 @@ import { CreateEnrollmentComponent } from './create-enrollment/create-enrollment
 import { UpdateEnrollmentComponent } from './update-enrollment/update-enrollment.component';
 import { CreateExamPeriodComponent } from './create-exam-period/create-exam-period.component';
 import { UpdateExamPeriodComponent } from './update-exam-period/update-exam-period.component';
+import { CreateExamComponent } from './create-exam/create-exam.component';
+import { UpdateExamComponent } from './update-exam/update-exam.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -64,7 +66,9 @@ import { UpdateExamPeriodComponent } from './update-exam-period/update-exam-peri
     CreateEnrollmentComponent,
     UpdateEnrollmentComponent,
     CreateExamPeriodComponent,
-    UpdateExamPeriodComponent
+    UpdateExamPeriodComponent,
+    CreateExamComponent,
+    UpdateExamComponent
   ],
   imports: [
     BrowserModule,
