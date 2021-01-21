@@ -27,6 +27,7 @@ import { TeacherListComponent } from './teacher-list/teacher-list.component';
 import { UpdateCourseComponent } from './update-course/update-course.component';
 import { UpdateDocumentComponent } from './update-document/update-document.component';
 import { UpdateEnrollmentComponent } from './update-enrollment/update-enrollment.component';
+import { UpdateExamPeriodComponent } from './update-exam-period/update-exam-period.component';
 import { UpdateStudentComponent } from './update-student/update-student.component';
 import { UpdateTeacherComponent } from './update-teacher/update-teacher.component';
 
@@ -55,6 +56,7 @@ const routes: Routes = [
   {path: 'enrollment-details/:id', component: EnrollmentDetailsComponent},
   {path: 'examperiods', component: ExamPeriodListComponent},
   {path: 'create-examperiod', component: CreateExamPeriodComponent},
+  {path: 'update-examperiod/:id', component: UpdateExamPeriodComponent},
   {path: 'examperiod-details/:id', component: ExamPeriodDetailsComponent},
   {path: 'exams', component: ExamListComponent},
   {path: 'exam-details/:id', component: ExamDetailsComponent},
