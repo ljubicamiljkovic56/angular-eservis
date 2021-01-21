@@ -1,0 +1,30 @@
+<div class="col-md-6 offset-md-3">
+    <h3> Izmeni uplatu </h3>
+    <form (ngSubmit) = "onSubmit()">
+        <div class="form-group" [formGroup]="form">
+            <label> Svrha uplate </label>
+            <input type="text" class="form-control" id="svrha" [(ngModel)]="payment.svrha" name="svrha" [formControl]="form.controls.svrha">
+        </div>
+    
+        <div class="form-group" [formGroup]="form">
+            <label> Iznos </label>
+            <input type="text" class="form-control" id="amount" [(ngModel)]="payment.amount" name="amount" [formControl]="form.controls.amount">
+        </div>
+
+        <div class="form-group" [formGroup]="form">
+            <label> Datum </label>
+            <input type="date" class="form-control" id="datum" [(ngModel)]="payment.datum" name="datum" [formControl]="form.controls.datum">
+        </div>
+
+        <div class="form-group" [formGroup]="form">
+            <label for="students"> Student </label>
+            <select class="form-control"  formControlName="students" id="students" required>
+                <option *ngFor="let student of students; let i = index;" [value]="students[i].id">
+                    {{students[i].cardNumber}} {{students[i].firstName}}  {{students[i].lastName}}
+                </option>
+            </select>
+        </div>
+    
+        <button class="btn btn-success" type="submit">Izmeni</button>
+    </form>
+</div>

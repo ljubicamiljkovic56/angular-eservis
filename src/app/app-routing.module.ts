@@ -7,6 +7,7 @@ import { CreateDocumentComponent } from './create-document/create-document.compo
 import { CreateEnrollmentComponent } from './create-enrollment/create-enrollment.component';
 import { CreateExamPeriodComponent } from './create-exam-period/create-exam-period.component';
 import { CreateExamComponent } from './create-exam/create-exam.component';
+import { CreatePaymentComponent } from './create-payment/create-payment.component';
 import { CreateStudentComponent } from './create-student/create-student.component';
 import { CreateTeacherComponent } from './create-teacher/create-teacher.component';
 import { DocumentDetailsComponent } from './document-details/document-details.component';
@@ -30,6 +31,7 @@ import { UpdateDocumentComponent } from './update-document/update-document.compo
 import { UpdateEnrollmentComponent } from './update-enrollment/update-enrollment.component';
 import { UpdateExamPeriodComponent } from './update-exam-period/update-exam-period.component';
 import { UpdateExamComponent } from './update-exam/update-exam.component';
+import { UpdatePaymentComponent } from './update-payment/update-payment.component';
 import { UpdateStudentComponent } from './update-student/update-student.component';
 import { UpdateTeacherComponent } from './update-teacher/update-teacher.component';
 
@@ -65,6 +67,8 @@ const routes: Routes = [
   {path: 'update-exam/:id', component: UpdateExamComponent},
   {path: 'exam-details/:id', component: ExamDetailsComponent},
   {path: 'payments', component: PaymentListComponent},
+  {path: 'create-payment', component: CreatePaymentComponent},
+  {path: 'update-payment/:id', component: UpdatePaymentComponent},
   {path: 'payment-details/:id', component: PaymentDetailsComponent}
 ];
 
