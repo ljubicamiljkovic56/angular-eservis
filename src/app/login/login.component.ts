@@ -42,7 +42,9 @@ export class LoginComponent implements OnInit {
     console.log(auth.password);
     this.authService.login(auth).subscribe(data =>{
       console.log(data);
+      localStorage.setItem('id', data.id);
       localStorage.setItem('username', data.username);
+      localStorage.setItem('password', data.password);
       console.log(localStorage);
       console.log(data.username);
 					var user = {
