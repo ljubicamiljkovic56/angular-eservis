@@ -5,6 +5,8 @@ import { Student } from '../../app/model/student';
 import { Course } from '../model/course';
 import { Enrollment } from '../model/enrollment';
 import { Exam } from '../model/exam';
+import { Payment } from '../model/payment';
+import { Document } from '../model/document';
 @Injectable({
   providedIn: 'root'
 })
@@ -44,5 +46,13 @@ export class StudentService {
 
   getStudentsExams(studentId: number): Observable<Exam[]>{
     return this.httpClient.get<Exam[]>(`${this.baseURL}/${studentId}/exams`);
+  }
+
+  getStudentsPayments(studentId: number): Observable<Payment[]>{
+    return this.httpClient.get<Payment[]>(`${this.baseURL}/${studentId}/payments`);
+  }
+
+  getStudentsDocuments(studentId: number): Observable<Document[]>{
+    return this.httpClient.get<Document[]>(`${this.baseURL}/${studentId}/documents`);
   }
 }

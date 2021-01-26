@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Course } from '../model/course';
+import { Document } from '../model/document';
 import { Enrollment } from '../model/enrollment';
 import { Exam } from '../model/exam';
+import { Payment } from '../model/payment';
 import { Student } from '../model/student';
 import { AuthService } from '../services/auth.service';
 import { CourseService } from '../services/course.service';
@@ -20,6 +22,8 @@ export class ForStudentComponent implements OnInit {
   student: Student;
   enrollments: Enrollment[];
   exams: Exam[];
+  payments: Payment[];
+  documents: Document[];
   studentId: number;
   constructor(private router: Router, private authService: AuthService,
     private studentService: StudentService,
@@ -43,12 +47,29 @@ export class ForStudentComponent implements OnInit {
         this.studentId = Number(data.id);
         console.log(this.studentId);
         this.student = data;
+        
         this.studentService.getStudentsEnrollments(this.studentId).subscribe(data => {
           console.log(this.studentId);
           console.log(data);
           this.enrollments = data;
           console.log(this.enrollments[0]);
-          //this.studentService
+          
+          this.studentService.getStudentsExams(this.studentId).subscribe(data => {
+            console.log(data);
+            this.exams = data;
+          }, error => console.log(error));
+
+          this.studentService.getStudentsPayments(this.studentId).subscribe(data => {
+            console.log(data);
+            this.payments = data;
+          }, error => console.log(error));
+
+          this.studentService.getStudentsDocuments(this.studentId).subscribe(data => {
+            console.log(data);
+            this.documents = data;
+          }, error => console.log(error));
+
+          
         }, error => console.log(error));
       },error => console.error(error));
       

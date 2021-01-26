@@ -10,6 +10,7 @@
         <label> <b> Prezime studenta </b></label> {{student.lastName}}
     </div>
     
+    <br>
         <h5> Predmeti koje student pohadja</h5>
         <table class="table table-striped">
             <thead>
@@ -29,5 +30,56 @@
             </tr>
             </tbody>
         </table>
-    
+    <br>
+        <h5> Studentovi ispiti </h5>
+        <table class="table table-striped">
+            <thead>
+                <th>Bodovi sa ispita</th>
+                <th>Bodovi sa kolokvijuma</th>
+                <th>Datum ispita</th>
+                <th>Naziv predmeta</th>
+                <th>ESPB</th>
+                <th>Ispitni rok</th>
+            </thead>
+            <tbody>
+            <tr *ngFor="let exam of exams; let i = index;">
+                <td>{{exams[i].examPoints}}</td>
+                <td>{{exams[i].labPoints}}</td>
+                <td>{{exams[i].datum}}</td>   
+                <td>{{exams[i].course.name}}</td> 
+                <td>{{exams[i].course.espb}}</td>
+                <td>{{exams[i].examPeriod.name}}</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <br>
+        <h5> Uplate studenta </h5>
+        <table class="table table-striped">
+            <thead>
+                <th>Svrha</th>
+                <th>Iznos</th>
+                <th>Datum uplate</th>
+            </thead>
+            <tbody>
+            <tr *ngFor="let payment of payments; let i = index;">
+                <td>{{payments[i].svrha}}</td>
+                <td>{{payments[i].amount}}</td>
+                <td>{{payments[i].datum}}</td>   
+            </tr>
+            </tbody>
+        </table>
+
+        <br>
+        <h5> Dokumenta studenta </h5>
+        <table class="table table-striped">
+            <thead>
+                <th>Tip dokumenta</th>
+            </thead>
+            <tbody>
+            <tr *ngFor="let document of documents; let i = index;">
+                <td>{{documents[i].type.name}}</td>
+            </tr>
+            </tbody>
+        </table>
 </div>
