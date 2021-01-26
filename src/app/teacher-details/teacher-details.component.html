@@ -9,4 +9,21 @@
     <div>
         <label> <b> Zvanje profesora </b></label> {{teacher.title}}
     </div>
+
+    <br>
+    <h5> Predmeti koje predaje profesor</h5>
+    <table class="table table-striped">
+        <thead>
+            <th>Naziv predmeta</th>
+            <th>ESPB</th>
+            <th>Semestar</th>
+        </thead>
+        <tbody>
+        <tr *ngFor="let course of courses; let i = index;">
+            <td>{{courses[i].name}}</td>
+            <td>{{courses[i].espb}}</td>
+            <td>{{courses[i].semester}}</td>   
+        </tr>
+        </tbody>
+    </table>
 </div>

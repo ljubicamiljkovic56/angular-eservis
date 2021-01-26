@@ -9,4 +9,26 @@
     <div>
         <label> <b> Kraj </b></label> {{examperiod.endDate}}
     </div>
+
+    <h5>Ispiti ovog ispitnog roka</h5>
+    <table class="table table-striped">
+        <thead>
+            <th>Bodovi sa ispita</th>
+            <th>Bodovi sa kolokvijuma</th>
+            <th>Datum ispita</th>
+            <th>Naziv predmeta</th>
+            <th>ESPB</th>
+            <th>Student</th>
+        </thead>
+        <tbody>
+        <tr *ngFor="let exam of exams; let i = index;">
+            <td>{{exams[i].examPoints}}</td>
+            <td>{{exams[i].labPoints}}</td>
+            <td>{{exams[i].datum}}</td>   
+            <td>{{exams[i].course.name}}</td> 
+            <td>{{exams[i].course.espb}}</td>
+            <td>{{exams[i].student.cardNumber}} {{exams[i].student.firstName}} {{exams[i].student.lastName}}</td>
+        </tr>
+        </tbody>
+    </table>
 </div>

@@ -18,6 +18,7 @@ import { ExamDetailsComponent } from './exam-details/exam-details.component';
 import { ExamListComponent } from './exam-list/exam-list.component';
 import { ExamPeriodDetailsComponent } from './exam-period-details/exam-period-details.component';
 import { ExamPeriodListComponent } from './exam-period-list/exam-period-list.component';
+import { ForAdminComponent } from './for-admin/for-admin.component';
 import { ForStudentComponent } from './for-student/for-student.component';
 import { ForTeacherComponent } from './for-teacher/for-teacher.component';
 import { LoginComponent } from './login/login.component';
@@ -39,9 +40,10 @@ import { UpdateTeacherComponent } from './update-teacher/update-teacher.componen
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
+  {path: '', redirectTo: 'login', pathMatch: 'full'},
+  {path: 'for-admin', component: ForAdminComponent},
   {path: 'students', component: StudentListComponent},
   {path: 'create-student', component: CreateStudentComponent},
-  {path: '', redirectTo: 'login', pathMatch: 'full'},
   {path: 'update-student/:id', component: UpdateStudentComponent},
   {path: 'student-details/:id', component: StudentDetailsComponent},
   {path: 'teachers', component: TeacherListComponent},

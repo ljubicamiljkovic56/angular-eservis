@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Course } from '../model/course';
 import { Teacher } from '../model/teacher';
 import { TeacherService } from '../services/teacher.service';
 
@@ -12,6 +13,7 @@ export class TeacherDetailsComponent implements OnInit {
 
   id: number;
   teacher: Teacher;
+  courses: Course[];
   constructor(private route: ActivatedRoute,
     private teacherService: TeacherService) { }
 
@@ -21,7 +23,12 @@ export class TeacherDetailsComponent implements OnInit {
     this.teacher = new Teacher();
     this.teacherService.getTeacherById(this.id).subscribe(data => {
       this.teacher = data;
-    });
+    }, error => console.log(error));
+
+    this.teacherService.getTeachersCourses(this.id).subscribe(data => {
+      console.log(data);
+      this.courses = data;
+    }, error => console.log(error));
   }
 
 }

@@ -12,4 +12,44 @@
     <div>
         <label> <b> Profesor </b></label> {{course.teacher.firstName}} {{course.teacher.lastName}}
     </div>
+
+    <br>
+    <h5>Svi studenti koji pohadjaju ovaj predmet</h5>
+    <table class="table table-striped">
+        <thead>
+            <th>Pocetak</th>
+            <th>Kraj</th>
+            <th>Student</th>
+        </thead>
+        <tbody>
+        <tr *ngFor="let enrollment of enrollments; let i = index;">
+            <td>{{enrollments[i].startDate}}</td>
+            <td>{{enrollments[i].endDate}}</td>
+            <td>{{enrollments[i].student.cardNumber}} {{enrollments[i].student.firstName}} {{enrollments[i].student.lastName}}</td>   
+        </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <h5>Svi ispiti ovog predmeta</h5>
+    <table class="table table-striped">
+        <thead>
+            <th>Bodovi ispit</th>
+            <th>Bodovi kolokvijum</th>
+            <th>Datum ispita</th>
+            <th>Student</th>
+            <th>Ispitni rok</th>
+            <th>Trajanje ispitnog roka</th>
+        </thead>
+        <tbody>
+        <tr *ngFor="let exam of exams; let i = index;">
+            <td>{{exams[i].examPoints}}</td>
+            <td>{{exams[i].labPoints}}</td>
+            <td>{{exams[i].datum}}</td>
+            <td>{{exams[i].student.cardNumber}} {{exams[i].student.firstName}} {{exams[i].student.lastName}}</td>
+            <td>{{exams[i].examPeriod.name}}</td>
+            <td>od {{exams[i].examPeriod.startDate}} do {{exams[i].examPeriod.endDate}}</td>   
+        </tr>
+        </tbody>
+    </table>
 </div>

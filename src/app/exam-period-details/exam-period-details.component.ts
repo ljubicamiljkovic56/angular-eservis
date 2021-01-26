@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Exam } from '../model/exam';
 import { ExamPeriod } from '../model/exam-period';
 import { ExamPeriodService } from '../services/exam-period.service';
 
@@ -12,7 +13,7 @@ export class ExamPeriodDetailsComponent implements OnInit {
 
   id: number;
   examperiod: ExamPeriod;
-
+  exams: Exam[];
   constructor(private route: ActivatedRoute,
     private examPeriodService: ExamPeriodService) { }
 
@@ -22,7 +23,12 @@ export class ExamPeriodDetailsComponent implements OnInit {
     this.examperiod = new ExamPeriod();
     this.examPeriodService.getExamPeriodById(this.id).subscribe(data => {
       this.examperiod = data;
-    });
+    }, error => console.log(error));
+
+    this.examPeriodService.getExamPeriodExams(this.id).subscribe(data => {
+      console.log(data);
+      this.exams = data;
+    }, error => console.log(error));
   }
 
 }

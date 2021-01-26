@@ -39,6 +39,7 @@ import { CreatePaymentComponent } from './create-payment/create-payment.componen
 import { UpdatePaymentComponent } from './update-payment/update-payment.component';
 import { ForTeacherComponent } from './for-teacher/for-teacher.component';
 import { ForStudentComponent } from './for-student/for-student.component';
+import { ForAdminComponent } from './for-admin/for-admin.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -76,7 +77,8 @@ import { ForStudentComponent } from './for-student/for-student.component';
     CreatePaymentComponent,
     UpdatePaymentComponent,
     ForTeacherComponent,
-    ForStudentComponent
+    ForStudentComponent,
+    ForAdminComponent
   ],
   imports: [
     BrowserModule,

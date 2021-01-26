@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Exam } from '../model/exam';
 import { ExamPeriod } from '../model/exam-period';
 
 @Injectable({
@@ -31,4 +32,7 @@ export class ExamPeriodService {
   deleteExamPeriod(id: number): Observable<Object>{
     return this.httpClient.delete(`${this.baseURL}/deleteExamPeriod/${id}`);
   }
+
+  getExamPeriodExams(examPeriodId: number): Observable<Exam[]>{
+    return this.httpClient.get<Exam[]>(`${this.baseURL}/${examPeriodId}/exams`);  }
 }
