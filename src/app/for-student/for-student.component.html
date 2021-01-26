@@ -1,0 +1,33 @@
+<h3> Detalji ulogovanog studenta </h3>
+<div>
+    <div>
+        <label> <b> Broj indeksa </b></label> {{student.cardNumber}}
+    </div>
+    <div>
+        <label> <b> Ime studenta </b></label> {{student.firstName}}
+    </div>
+    <div>
+        <label> <b> Prezime studenta </b></label> {{student.lastName}}
+    </div>
+    
+        <h5> Predmeti koje student pohadja</h5>
+        <table class="table table-striped">
+            <thead>
+                <th>Pocetak</th>
+                <th>Kraj</th>
+                <th>Naziv predmeta</th>
+                <th>ESPB</th>
+                <th>Semestar</th>
+            </thead>
+            <tbody>
+            <tr *ngFor="let enrollment of enrollments; let i = index;">
+                <td>{{enrollments[i].startDate}}</td>
+                <td>{{enrollments[i].endDate}}</td>
+                <td>{{enrollments[i].course.name}}</td>   
+                <td>{{enrollments[i].course.espb}}</td> 
+                <td>{{enrollments[i].course.semester}}</td>
+            </tr>
+            </tbody>
+        </table>
+    
+</div>

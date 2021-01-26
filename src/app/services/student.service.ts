@@ -2,6 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Student } from '../../app/model/student';
+import { Course } from '../model/course';
+import { Enrollment } from '../model/enrollment';
+import { Exam } from '../model/exam';
 @Injectable({
   providedIn: 'root'
 })
@@ -23,11 +26,23 @@ export class StudentService {
     return this.httpClient.get<Student>(`${this.baseURL}/studentDetails/${id}`);
   }
 
+  getStudentByUserId(userid: number): Observable<Student>{
+    return this.httpClient.get<Student>(`${this.baseURL}/studentDetailsUserId/${userid}`);
+  }
+
   updateStudent(id: number, student: Student): Observable<Object>{
     return this.httpClient.put(`${this.baseURL}/updateStudent/${id}`, student);
   }
 
   deleteStudent(id: number): Observable<Object>{
     return this.httpClient.delete(`${this.baseURL}/deleteStudent/${id}`);
+  }
+
+  getStudentsEnrollments(studentId: number): Observable<Enrollment[]> {
+    return this.httpClient.get<Enrollment[]>(`${this.baseURL}/${studentId}/enrollments`);
+  }
+
+  getStudentsExams(studentId: number): Observable<Exam[]>{
+    return this.httpClient.get<Exam[]>(`${this.baseURL}/${studentId}/exams`);
   }
 }

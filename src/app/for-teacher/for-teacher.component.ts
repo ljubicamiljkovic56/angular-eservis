@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Course } from '../model/course';
+import { Teacher } from '../model/teacher';
 import { AuthService } from '../services/auth.service';
+import { CourseService } from '../services/course.service';
 import { TeacherService } from '../services/teacher.service';
 
 @Component({
@@ -12,8 +15,11 @@ export class ForTeacherComponent implements OnInit {
 
   role: string;
   id: number;
+  teacher: Teacher;
+  courses: Course[];
+  teacherId: number;
   constructor(private router: Router, private authService: AuthService,
-    private teacherService: TeacherService) { }
+    private teacherService: TeacherService, private courseService: CourseService) { }
 
   ngOnInit(): void {
     if(this.authService.isLoggedIn() == false){
@@ -26,12 +32,21 @@ export class ForTeacherComponent implements OnInit {
     this.role = localStorage.getItem('role');
     this.id = Number(localStorage.getItem('id'));
     if(this.role === 'ROLE_TEACHER'){
-      this.teacherService.getTeacherById(this.id).subscribe(data => {
+      this.teacherService.getTeacherByUserId(this.id).subscribe(data => {
+        console.log(this.id);
         console.log(data);
-      })
+        console.log(data.id);
+        this.teacherId = Number(data.id);
+        console.log(this.teacherId);
+        this.teacher = data;
+        this.teacherService.getTeachersCourses(this.teacherId).subscribe(data => {
+          console.log(this.teacherId);
+          console.log(data);
+          this.courses = data;
+        }, error => console.error(error));
+      }, error => console.error(error));
     }
   }
-  
   
 
 }

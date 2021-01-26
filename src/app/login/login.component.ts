@@ -66,10 +66,12 @@ export class LoginComponent implements OnInit {
 						if(this.role === 'ROLE_ADMIN') {
 							this.router.navigate(['/students'])
 						}else if(this.role === 'ROLE_TEACHER') {
-							this.router.navigate(['/teachers'])
+							this.router.navigate(['/for-teacher'])
+						}else if(this.role === 'ROLE_STUDENT'){
+							this.router.navigate(['/for-student'])
 						}else {
-							this.router.navigate(['courses'])
-						}
+              this.router.navigate(['/login'])
+            }
           }
     });
   }

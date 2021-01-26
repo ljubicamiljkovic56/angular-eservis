@@ -38,6 +38,7 @@ import { UpdateExamComponent } from './update-exam/update-exam.component';
 import { CreatePaymentComponent } from './create-payment/create-payment.component';
 import { UpdatePaymentComponent } from './update-payment/update-payment.component';
 import { ForTeacherComponent } from './for-teacher/for-teacher.component';
+import { ForStudentComponent } from './for-student/for-student.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -74,7 +75,8 @@ import { ForTeacherComponent } from './for-teacher/for-teacher.component';
     UpdateExamComponent,
     CreatePaymentComponent,
     UpdatePaymentComponent,
-    ForTeacherComponent
+    ForTeacherComponent,
+    ForStudentComponent
   ],
   imports: [
     BrowserModule,

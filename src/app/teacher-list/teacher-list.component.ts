@@ -40,4 +40,7 @@ export class TeacherListComponent implements OnInit {
     this.router.navigate(['teacher-details', id]);
   }
 
+  teacherDetailsByUserId(userid: number) {
+    this.router.navigate(['for-teacher', userid]);
+  }
 }

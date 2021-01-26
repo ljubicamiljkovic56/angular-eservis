@@ -18,6 +18,7 @@ import { ExamDetailsComponent } from './exam-details/exam-details.component';
 import { ExamListComponent } from './exam-list/exam-list.component';
 import { ExamPeriodDetailsComponent } from './exam-period-details/exam-period-details.component';
 import { ExamPeriodListComponent } from './exam-period-list/exam-period-list.component';
+import { ForStudentComponent } from './for-student/for-student.component';
 import { ForTeacherComponent } from './for-teacher/for-teacher.component';
 import { LoginComponent } from './login/login.component';
 import { PaymentDetailsComponent } from './payment-details/payment-details.component';
@@ -71,7 +72,8 @@ const routes: Routes = [
   {path: 'create-payment', component: CreatePaymentComponent},
   {path: 'update-payment/:id', component: UpdatePaymentComponent},
   {path: 'payment-details/:id', component: PaymentDetailsComponent},
-  {path: 'for-teacher', component:ForTeacherComponent}
+  {path: 'for-teacher', component:ForTeacherComponent},
+  {path: 'for-student', component:ForStudentComponent}
 ];
 
 @NgModule({
