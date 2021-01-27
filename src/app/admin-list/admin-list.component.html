@@ -1,0 +1,21 @@
+<h2> Admini lista </h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th> Ime admina </th>
+            <th> Prezime admina </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let admin of admins">
+            <td> {{ admin.firstname }}</td>
+            <td> {{ admin.lastname }}</td>
+            <td>
+                <button (click) = "updateAdmin(admin.id)" class="btn btn-info">Izmeni</button>
+                <button (click) = "deleteAdmin(admin.id)" class="btn btn-danger" style="margin-left: 10px;">Obrisi</button>
+                <button (click) = "adminDetails(admin.id)" class="btn btn-success" style="margin-left: 10px;">Detalji</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

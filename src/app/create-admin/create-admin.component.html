@@ -1,0 +1,16 @@
+<div class="col-md-6 offset-md-3">
+    <h3> Dodaj predmet </h3>
+    <form (ngSubmit) = "onSubmit()">
+        <div class="form-group" [formGroup]="form">
+            <label> Ime admina </label>
+            <input type="text" class="form-control" id="firstname" [(ngModel)]="admin.firstname" name="firstname" [formControl]="form.controls.firstname">
+        </div>
+    
+        <div class="form-group" [formGroup]="form">
+            <label> Prezime admina </label>
+            <input type="text" class="form-control" id="lastname" [(ngModel)]="admin.lastname" name="lastname" [formControl]="form.controls.lastname">
+        </div>
+    
+        <button class="btn btn-success" type="submit">Dodaj</button>
+    </form>
+</div>

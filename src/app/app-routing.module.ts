@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AdminDetailsComponent } from './admin-details/admin-details.component';
+import { AdminListComponent } from './admin-list/admin-list.component';
 import { CourseDetailsComponent } from './course-details/course-details.component';
 import { CourseListComponent } from './course-list/course-list.component';
+import { CreateAdminComponent } from './create-admin/create-admin.component';
 import { CreateCourseComponent } from './create-course/create-course.component';
 import { CreateDocumentComponent } from './create-document/create-document.component';
 import { CreateEnrollmentComponent } from './create-enrollment/create-enrollment.component';
@@ -29,6 +32,7 @@ import { StudentDetailsComponent } from './student-details/student-details.compo
 import { StudentListComponent } from './student-list/student-list.component';
 import { TeacherDetailsComponent } from './teacher-details/teacher-details.component';
 import { TeacherListComponent } from './teacher-list/teacher-list.component';
+import { UpdateAdminComponent } from './update-admin/update-admin.component';
 import { UpdateCourseComponent } from './update-course/update-course.component';
 import { UpdateDocumentComponent } from './update-document/update-document.component';
 import { UpdateEnrollmentComponent } from './update-enrollment/update-enrollment.component';
@@ -74,6 +78,10 @@ const routes: Routes = [
   {path: 'create-payment', component: CreatePaymentComponent},
   {path: 'update-payment/:id', component: UpdatePaymentComponent},
   {path: 'payment-details/:id', component: PaymentDetailsComponent},
+  {path: 'admins', component: AdminListComponent},
+  {path: 'create-admin', component: CreateAdminComponent},
+  {path: 'admin-details/:id', component: AdminDetailsComponent},
+  {path: 'update-admin/:id', component: UpdateAdminComponent},
   {path: 'for-teacher', component:ForTeacherComponent},
   {path: 'for-student', component:ForStudentComponent}
 ];

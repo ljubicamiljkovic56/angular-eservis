@@ -40,6 +40,10 @@ import { UpdatePaymentComponent } from './update-payment/update-payment.componen
 import { ForTeacherComponent } from './for-teacher/for-teacher.component';
 import { ForStudentComponent } from './for-student/for-student.component';
 import { ForAdminComponent } from './for-admin/for-admin.component';
+import { CreateAdminComponent } from './create-admin/create-admin.component';
+import { AdminListComponent } from './admin-list/admin-list.component';
+import { AdminDetailsComponent } from './admin-details/admin-details.component';
+import { UpdateAdminComponent } from './update-admin/update-admin.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -78,7 +82,11 @@ import { ForAdminComponent } from './for-admin/for-admin.component';
     UpdatePaymentComponent,
     ForTeacherComponent,
     ForStudentComponent,
-    ForAdminComponent
+    ForAdminComponent,
+    CreateAdminComponent,
+    AdminListComponent,
+    AdminDetailsComponent,
+    UpdateAdminComponent
   ],
   imports: [
     BrowserModule,
