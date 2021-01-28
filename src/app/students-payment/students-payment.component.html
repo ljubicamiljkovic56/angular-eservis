@@ -1,0 +1,27 @@
+<br>
+<h1 class="text-center">eServis</h1>
+<br>
+<div class="container">
+<div class="col-md-6 offset-md-3">
+    <h3> Dodaj uplatu </h3>
+    <form (ngSubmit) = "onSubmit()">
+        <div class="form-group" [formGroup]="form">
+            <label> Svrha uplate </label>
+            <input type="text" class="form-control" id="svrha"  name="svrha" [formControl]="form.controls.svrha">
+        </div>
+    
+        <div class="form-group" [formGroup]="form">
+            <label> Iznos </label>
+            <input type="text" class="form-control" id="amount" name="amount" [formControl]="form.controls.amount">
+        </div>
+
+        <div class="form-group" [formGroup]="form">
+            <label> Datum </label>
+            <input type="date" class="form-control" id="datum" name="datum" [formControl]="form.controls.datum">
+        </div>
+    
+        <button class="btn btn-success" type="submit">Dodaj</button>
+    </form>
+</div>
+</div>
+    

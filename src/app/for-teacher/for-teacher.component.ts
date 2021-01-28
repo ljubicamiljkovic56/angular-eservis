@@ -48,7 +48,7 @@ export class ForTeacherComponent implements OnInit {
     }
   }
 
-  
-  
-
+  editTeacher1(id) {
+    this.router.navigate(['teacher-edit',id]);
+  }
 }

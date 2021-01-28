@@ -44,6 +44,8 @@ import { CreateAdminComponent } from './create-admin/create-admin.component';
 import { AdminListComponent } from './admin-list/admin-list.component';
 import { AdminDetailsComponent } from './admin-details/admin-details.component';
 import { UpdateAdminComponent } from './update-admin/update-admin.component';
+import { TeacherEditComponent } from './teacher-edit/teacher-edit.component';
+import { StudentsPaymentComponent } from './students-payment/students-payment.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -86,7 +88,9 @@ import { UpdateAdminComponent } from './update-admin/update-admin.component';
     CreateAdminComponent,
     AdminListComponent,
     AdminDetailsComponent,
-    UpdateAdminComponent
+    UpdateAdminComponent,
+    TeacherEditComponent,
+    StudentsPaymentComponent
   ],
   imports: [
     BrowserModule,

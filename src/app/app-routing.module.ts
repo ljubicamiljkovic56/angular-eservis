@@ -30,7 +30,9 @@ import { PaymentListComponent } from './payment-list/payment-list.component';
 import { EnrollmentService } from './services/enrollment.service';
 import { StudentDetailsComponent } from './student-details/student-details.component';
 import { StudentListComponent } from './student-list/student-list.component';
+import { StudentsPaymentComponent } from './students-payment/students-payment.component';
 import { TeacherDetailsComponent } from './teacher-details/teacher-details.component';
+import { TeacherEditComponent } from './teacher-edit/teacher-edit.component';
 import { TeacherListComponent } from './teacher-list/teacher-list.component';
 import { UpdateAdminComponent } from './update-admin/update-admin.component';
 import { UpdateCourseComponent } from './update-course/update-course.component';
@@ -83,7 +85,9 @@ const routes: Routes = [
   {path: 'admin-details/:id', component: AdminDetailsComponent},
   {path: 'update-admin/:id', component: UpdateAdminComponent},
   {path: 'for-teacher', component:ForTeacherComponent},
-  {path: 'for-student', component:ForStudentComponent}
+  {path: 'teacher-edit/:id', component: TeacherEditComponent},
+  {path: 'for-student', component:ForStudentComponent},
+  {path: 'students-payment', component:StudentsPaymentComponent}
 ];
 
 @NgModule({

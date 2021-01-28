@@ -31,4 +31,8 @@ export class PaymentService {
   deletePayment(id: number): Observable<Object>{
     return this.httpClient.delete(`${this.baseURL}/deletePayment/${id}`);
   }
+
+  addStudentsPayment(studentId: number, payment: Payment):Observable<Object>{
+    return this.httpClient.post(`${this.baseURL}/addStudentPayment/${studentId}`, payment);
+  }
 }

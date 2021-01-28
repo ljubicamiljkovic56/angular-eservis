@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a [routerLink]="['/for-teacher']" routerLinkActive="active" class="nav-link">Profil profesora</a>
+        </li>
+    </ul>
+</nav>
+<h1 class="text-center">eServis</h1>
+<br>
+<div class="container">
+<div class="col-md-6 offset-md-3">
+    <h3> Izmeni profesora </h3>
+    <form (ngSubmit) = "onSubmit()">
+        <div class="form-group">
+            <label> Ime profesora </label>
+            <input type="text" class="form-control" id="firstName" [(ngModel)]="teacher.firstName" name="firstName">
+        </div>
+    
+        <div class="form-group">
+            <label> Prezime profesora </label>
+            <input type="text" class="form-control" id="lastName" [(ngModel)]="teacher.lastName" name="lastName">
+        </div>
+    
+        <div class="form-group">
+            <label> Zvanje profesora </label>
+            <select class="form-control"  id="title" [(ngModel)]="teacher.title" name = "title">
+                <option>nastavnik</option>
+                <option>asistent</option>
+                <option>demonstrator</option>	    
+            </select>
+        </div>
+    
+        <button class="btn btn-success" type="submit">Izmeni</button>
+    </form>
+</div>
+</div>
