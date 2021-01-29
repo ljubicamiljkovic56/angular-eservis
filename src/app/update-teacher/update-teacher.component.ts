@@ -39,4 +39,19 @@ export class UpdateTeacherComponent implements OnInit {
   onSubmit(){
     this.updateTeacher();
   }
+
+  goToLogin(){
+    this.router.navigate(['/login']);
+  }
+
+  logout(){
+    localStorage.removeItem('id');
+    localStorage.removeItem('username');
+    localStorage.removeItem('password');
+    localStorage.removeItem('role');
+
+    console.log('Logout');
+
+    this.goToLogin();
+  }
 }

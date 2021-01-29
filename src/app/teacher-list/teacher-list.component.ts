@@ -43,4 +43,19 @@ export class TeacherListComponent implements OnInit {
   teacherDetailsByUserId(userid: number) {
     this.router.navigate(['for-teacher', userid]);
   }
+
+  goToLogin(){
+    this.router.navigate(['/login']);
+  }
+
+  logout(){
+    localStorage.removeItem('id');
+    localStorage.removeItem('username');
+    localStorage.removeItem('password');
+    localStorage.removeItem('role');
+
+    console.log('Logout');
+
+    this.goToLogin();
+  }
 }

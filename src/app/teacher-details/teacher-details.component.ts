@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Course } from '../model/course';
 import { Teacher } from '../model/teacher';
 import { TeacherService } from '../services/teacher.service';
@@ -14,7 +14,7 @@ export class TeacherDetailsComponent implements OnInit {
   id: number;
   teacher: Teacher;
   courses: Course[];
-  constructor(private route: ActivatedRoute,
+  constructor(private route: ActivatedRoute, private router: Router,
     private teacherService: TeacherService) { }
 
   ngOnInit(): void {
@@ -31,4 +31,19 @@ export class TeacherDetailsComponent implements OnInit {
     }, error => console.log(error));
   }
 
+
+  goToLogin(){
+    this.router.navigate(['/login']);
+  }
+
+  logout(){
+    localStorage.removeItem('id');
+    localStorage.removeItem('username');
+    localStorage.removeItem('password');
+    localStorage.removeItem('role');
+
+    console.log('Logout');
+
+    this.goToLogin();
+  }
 }
