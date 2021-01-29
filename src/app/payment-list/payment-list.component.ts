@@ -40,4 +40,19 @@ export class PaymentListComponent implements OnInit {
     this.router.navigate(['payment-details', id]);
   }
 
+  goToLogin(){
+    this.router.navigate(['/login']);
+  }
+
+  logout(){
+    localStorage.removeItem('id');
+    localStorage.removeItem('username');
+    localStorage.removeItem('password');
+    localStorage.removeItem('role');
+
+    console.log('Logout');
+
+    this.goToLogin();
+  }
+
 }

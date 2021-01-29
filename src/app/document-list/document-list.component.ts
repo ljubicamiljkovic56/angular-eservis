@@ -40,4 +40,19 @@ export class DocumentListComponent implements OnInit {
   documentDetails(id: number) {
     this.router.navigate(['document-details', id]);
   }
+
+  goToLogin(){
+    this.router.navigate(['/login']);
+  }
+
+  logout(){
+    localStorage.removeItem('id');
+    localStorage.removeItem('username');
+    localStorage.removeItem('password');
+    localStorage.removeItem('role');
+
+    console.log('Logout');
+
+    this.goToLogin();
+  }
 }

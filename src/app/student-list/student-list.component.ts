@@ -39,4 +39,19 @@ export class StudentListComponent implements OnInit {
   studentDetails(id: number) {
     this.router.navigate(['student-details', id]);
   }
+
+  goToLogin(){
+    this.router.navigate(['/login']);
+  }
+
+  logout(){
+    localStorage.removeItem('id');
+    localStorage.removeItem('username');
+    localStorage.removeItem('password');
+    localStorage.removeItem('role');
+
+    console.log('Logout');
+
+    this.goToLogin();
+  }
 }

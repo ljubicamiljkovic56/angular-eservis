@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Enrollment } from '../model/enrollment';
 import { EnrollmentService } from '../services/enrollment.service';
 
@@ -12,7 +12,7 @@ export class EnrollmentDetailsComponent implements OnInit {
 
   id: number;
   enrollment: Enrollment;
-  constructor(private route: ActivatedRoute,
+  constructor(private route: ActivatedRoute, private router: Router,
     private enrollmentService: EnrollmentService) { }
 
   ngOnInit(): void {
@@ -24,4 +24,19 @@ export class EnrollmentDetailsComponent implements OnInit {
     });
   }
 
+
+  goToLogin(){
+    this.router.navigate(['/login']);
+  }
+
+  logout(){
+    localStorage.removeItem('id');
+    localStorage.removeItem('username');
+    localStorage.removeItem('password');
+    localStorage.removeItem('role');
+
+    console.log('Logout');
+
+    this.goToLogin();
+  }
 }

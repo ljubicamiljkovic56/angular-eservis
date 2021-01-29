@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Payment } from '../model/payment';
 import { PaymentService } from '../services/payment.service';
 
@@ -12,7 +12,7 @@ export class PaymentDetailsComponent implements OnInit {
 
   id: number;
   payment: Payment;
-  constructor(private route: ActivatedRoute,
+  constructor(private route: ActivatedRoute, private router: Router,
     private paymentService: PaymentService) { }
 
   ngOnInit(): void {
@@ -24,4 +24,18 @@ export class PaymentDetailsComponent implements OnInit {
     });
   }
 
+  goToLogin(){
+    this.router.navigate(['/login']);
+  }
+
+  logout(){
+    localStorage.removeItem('id');
+    localStorage.removeItem('username');
+    localStorage.removeItem('password');
+    localStorage.removeItem('role');
+
+    console.log('Logout');
+
+    this.goToLogin();
+  }
 }
