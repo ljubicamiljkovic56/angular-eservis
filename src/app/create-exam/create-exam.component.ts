@@ -89,4 +89,19 @@ export class CreateExamComponent implements OnInit {
     console.log(this.exam);
     this.saveExam();
   }
+
+  goToLogin(){
+    this.router.navigate(['/login']);
+  }
+
+  logout(){
+    localStorage.removeItem('id');
+    localStorage.removeItem('username');
+    localStorage.removeItem('password');
+    localStorage.removeItem('role');
+
+    console.log('Logout');
+
+    this.goToLogin();
+  }
 }

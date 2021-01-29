@@ -51,4 +51,19 @@ export class ForTeacherComponent implements OnInit {
   editTeacher1(id) {
     this.router.navigate(['teacher-edit',id]);
   }
+
+  goToLogin(){
+    this.router.navigate(['/login']);
+  }
+
+  logout(){
+    localStorage.removeItem('id');
+    localStorage.removeItem('username');
+    localStorage.removeItem('password');
+    localStorage.removeItem('role');
+
+    console.log('Logout');
+
+    this.goToLogin();
+  }
 }

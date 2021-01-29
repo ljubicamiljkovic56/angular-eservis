@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Admin } from '../model/admin';
 import { AdminService } from '../services/admin.service';
 
@@ -12,7 +12,7 @@ export class AdminDetailsComponent implements OnInit {
 
   id: number;
   admin: Admin;
-  constructor(private route: ActivatedRoute,
+  constructor(private route: ActivatedRoute, private router: Router,
     private adminService: AdminService) { }
 
   ngOnInit(): void {
@@ -25,4 +25,18 @@ export class AdminDetailsComponent implements OnInit {
 
   }
 
+  goToLogin(){
+    this.router.navigate(['/login']);
+  }
+
+  logout(){
+    localStorage.removeItem('id');
+    localStorage.removeItem('username');
+    localStorage.removeItem('password');
+    localStorage.removeItem('role');
+
+    console.log('Logout');
+
+    this.goToLogin();
+  }
 }
