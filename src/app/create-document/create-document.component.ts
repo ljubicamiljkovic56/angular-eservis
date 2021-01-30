@@ -61,7 +61,7 @@ export class CreateDocumentComponent implements OnInit {
        this.document.student = data;
        console.log(data);
        this.documentService.createDocument(this.document).subscribe(data => {
-        console.log(this.document.id)
+        console.log(this.document);
         console.log(data);
         this.goToDocumentsList();
       }, error => console.error(error));
@@ -92,4 +92,5 @@ export class CreateDocumentComponent implements OnInit {
 
     this.goToLogin();
   }
+  
 }
